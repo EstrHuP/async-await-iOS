@@ -11,6 +11,7 @@
 		C7F3A07B2A38C639001A3D8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A07A2A38C639001A3D8A /* ContentView.swift */; };
 		C7F3A07D2A38C63B001A3D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7F3A07C2A38C63B001A3D8A /* Assets.xcassets */; };
 		C7F3A0802A38C63B001A3D8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7F3A07F2A38C63B001A3D8A /* Preview Assets.xcassets */; };
+		C7F3A0872A3B451B001A3D8A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0862A3B451B001A3D8A /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C7F3A07A2A38C639001A3D8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7F3A07C2A38C63B001A3D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7F3A07F2A38C63B001A3D8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7F3A0862A3B451B001A3D8A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		C7F3A0772A38C639001A3D8A /* AsyncAwaitExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7F3A0862A3B451B001A3D8A /* WebService.swift */,
 				C7F3A0782A38C639001A3D8A /* AsyncAwaitExampleApp.swift */,
 				C7F3A07A2A38C639001A3D8A /* ContentView.swift */,
 				C7F3A07C2A38C63B001A3D8A /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F3A0872A3B451B001A3D8A /* WebService.swift in Sources */,
 				C7F3A07B2A38C639001A3D8A /* ContentView.swift in Sources */,
 				C7F3A0792A38C639001A3D8A /* AsyncAwaitExampleApp.swift in Sources */,
 			);
