@@ -45,8 +45,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(1...10, id: \.self) { index in
-                Text("\(index)")
+            List(currentDates) { currentDate in
+                Text(currentDate.date)
             }.listStyle(.plain)
             
             .navigationTitle("Dates")
@@ -55,6 +55,10 @@ struct ContentView: View {
             }, label: {
                 Image(systemName: "arrow.clockwise.circle")
             }))
+        }
+        //iOS 15
+        .task {
+            await populateDates()
         }
     }
 }
