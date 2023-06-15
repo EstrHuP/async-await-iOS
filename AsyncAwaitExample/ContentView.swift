@@ -51,7 +51,11 @@ struct ContentView: View {
             
             .navigationTitle("Dates")
             .navigationBarItems(trailing: Button(action: {
-                // button action
+                // async { await populateDates() }
+                //iOS 15
+                Task.init(operation: {
+                    await populateDates()
+                })
             }, label: {
                 Image(systemName: "arrow.clockwise.circle")
             }))
