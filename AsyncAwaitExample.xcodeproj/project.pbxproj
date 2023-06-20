@@ -25,6 +25,7 @@
 		C7F3A0862A3B451B001A3D8A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		C7F3A0882A3B48A0001A3D8A /* CurrentDateListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateListViewModel.swift; sourceTree = "<group>"; };
 		C7F3A08A2A3B4BBA001A3D8A /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
+		C7F3A0902A3B4F68001A3D8A /* ContinuationPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ContinuationPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		C7F3A0772A38C639001A3D8A /* AsyncAwaitExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7F3A0902A3B4F68001A3D8A /* ContinuationPlayground.playground */,
 				C7F3A08C2A3B4BC6001A3D8A /* Example-CurrentDate */,
 				C7F3A0782A38C639001A3D8A /* AsyncAwaitExampleApp.swift */,
 				C7F3A07C2A38C63B001A3D8A /* Assets.xcassets */,
