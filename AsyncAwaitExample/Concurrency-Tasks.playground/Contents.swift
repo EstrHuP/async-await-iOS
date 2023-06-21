@@ -34,10 +34,6 @@ func getARP(userId: Int) async throws -> Double {
     
     print("getARP")
     
-    if userId % 2 == 0 {
-        throw NetworkError.invalidId
-    }
-    
     guard let equifaxURL = Constants.Urls.equifax(userId: userId), let experianURL = Constants.Urls.experian(userId: userId) else {
         throw NetworkError.badUrl
     }
@@ -60,16 +56,26 @@ func getARP(userId: Int) async throws -> Double {
 
 let ids = [1,2,3,4,5]
 var invalidIds: [Int] = []
-Task {
-    for id in ids {
-        do {
-            try Task.checkCancellation()
-            let apr = try await getARP(userId: id)
-            print(apr)
-        } catch {
-            print(error)
-            invalidIds.append(id)
+
+func getARPForAllUsers(ids: [Int]) async throws -> [Int: Double] {
+    
+    var userARP: [Int: Double] = [:]
+    
+    try await withThrowingTaskGroup(of: (Int, Double).self, body: { group in
+        for id in ids {
+            group.async {
+                return (id, try await getARP(userId: id))
+            }
         }
-    }
-    print(invalidIds)
+        
+        for try await (id, apr) in group {
+            userARP[id] = apr
+        }
+    })
+    return userARP
+}
+
+Task {
+    let userARPs = try await getARPForAllUsers(ids: ids)
+    print(userARPs)
 }
