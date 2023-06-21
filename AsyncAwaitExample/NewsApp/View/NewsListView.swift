@@ -13,17 +13,15 @@ struct NewsListView: View {
     @StateObject private var newsArticleListViewModel = NewsArticleListViewModel()
     
     var body: some View {
-        NavigationView {
-            
-            List(newsArticleListViewModel.newsArticles, id: \.id) { newsArticle in
-                NewsArticleCell(newsArticle: newsArticle)
-            }
-            .listStyle(.plain)
-            .onAppear {
-                newsArticleListViewModel.getNewsBy(sourceId: newsSource.id)
-            }
-            .navigationTitle(newsSource.name)
+        List(newsArticleListViewModel.newsArticles, id: \.id) { newsArticle in
+            NewsArticleCell(newsArticle: newsArticle)
         }
+        .listStyle(.plain)
+        //ios15 async await
+        .task {
+            await newsArticleListViewModel.getNewsBy(sourceId: newsSource.id)
+        }
+        .navigationTitle(newsSource.name)
     }
 }
 
