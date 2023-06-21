@@ -42,6 +42,7 @@
 		C7F3A0AE2A42EED5001A3D8A /* NewsSourceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSourceListViewModel.swift; sourceTree = "<group>"; };
 		C7F3A0B02A42EEFF001A3D8A /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		C7F3A0B22A42EF09001A3D8A /* NewsSourceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSourceListView.swift; sourceTree = "<group>"; };
+		C7F3A0B42A43732C001A3D8A /* Concurrency-Tasks.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Concurrency-Tasks.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		C7F3A0772A38C639001A3D8A /* AsyncAwaitExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7F3A0B42A43732C001A3D8A /* Concurrency-Tasks.playground */,
 				C7F3A0912A42ED78001A3D8A /* NewsApp */,
 				C7F3A0902A3B4F68001A3D8A /* ContinuationPlayground.playground */,
 				C7F3A08C2A3B4BC6001A3D8A /* Example-CurrentDate */,
