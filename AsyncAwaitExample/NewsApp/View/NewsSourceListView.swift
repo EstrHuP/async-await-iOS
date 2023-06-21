@@ -19,8 +19,9 @@ struct NewsSourceListView: View {
                 }
             }
             .listStyle(.plain)
-            .onAppear {
-                newsSourceListViewModel.getSources()
+            //ios15 for async await func
+            .task {
+                await newsSourceListViewModel.getSources()
             }
             .navigationTitle("News Sources")
             .navigationBarItems(trailing: Button(action: {
