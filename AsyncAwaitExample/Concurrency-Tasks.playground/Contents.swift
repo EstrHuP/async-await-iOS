@@ -3,6 +3,7 @@ import UIKit
 enum NetworkError: Error {
     case badUrl
     case decodingError
+    case invalidId
 }
 
 struct CreditScore: Decodable {
@@ -33,6 +34,10 @@ func getARP(userId: Int) async throws -> Double {
     
     print("getARP")
     
+    if userId % 2 == 0 {
+        return NetworkError.invalidId
+    }
+    
     guard let equifaxURL = Constants.Urls.equifax(userId: userId), let experianURL = Constants.Urls.experian(userId: userId) else {
         throw NetworkError.badUrl
     }
@@ -54,9 +59,17 @@ func getARP(userId: Int) async throws -> Double {
 }
 
 let ids = [1,2,3,4,5]
+var invalidIds: [Int] = []
 Task {
     for id in ids {
-        let apr = try await getARP(userId: id)
-        print(apr)
+        do {
+            try Task.checkCancellation()
+            let apr = try await getARP(userId: id)
+            print(apr)
+        } catch {
+            print(error)
+            invalidIds.append(id)
+        }
     }
+    print(invalidIds)
 }
