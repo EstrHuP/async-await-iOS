@@ -25,7 +25,10 @@ struct NewsSourceListView: View {
             }
             .navigationTitle("News Sources")
             .navigationBarItems(trailing: Button(action: {
-                // refresh the news
+                //async { //is deprecated
+                Task { //ios15 the same as async
+                    await newsSourceListViewModel.getSources()
+                }
             }, label: {
                 Image(systemName: "arrow.clockwise.circle")
             }))
