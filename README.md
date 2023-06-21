@@ -21,7 +21,7 @@ I recommend using the ios 15 onwards.
 
 [Explore structured concurrency in Swift (WWDC 2021)](https://developer.apple.com/videos/play/wwdc2021/10134/)
 
-## 🧚‍♂️ Other resources
-Enable this option on Proyect Scheme to run this app on the Xcode simulator:
+## 🧚‍♂️ Another resources
+Enable this option in the Proyect Scheme to run this app in the Xcode simulator:
 
 <img width="940" alt="Captura de Pantalla 2023-06-15 a las 14 12 14" src="https://github.com/EstrHuP/async-await-iOS/assets/75578645/2e800bea-5b64-47d1-a985-ad2d5f943cae">
