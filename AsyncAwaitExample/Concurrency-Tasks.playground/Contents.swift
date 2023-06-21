@@ -75,7 +75,7 @@ func getARPForAllUsers(ids: [Int]) async throws -> [Int: Double] {
     return userARP
 }
 
-Task {
+Task.detached(priority: .background) { //to execute in background
     let userARPs = try await getARPForAllUsers(ids: ids)
     print(userARPs)
 }
