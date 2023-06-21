@@ -35,7 +35,7 @@ func getARP(userId: Int) async throws -> Double {
     print("getARP")
     
     if userId % 2 == 0 {
-        return NetworkError.invalidId
+        throw NetworkError.invalidId
     }
     
     guard let equifaxURL = Constants.Urls.equifax(userId: userId), let experianURL = Constants.Urls.experian(userId: userId) else {
