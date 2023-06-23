@@ -25,6 +25,7 @@
 		C7F3A0CC2A45B7DC001A3D8A /* RandomWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0CB2A45B7DC001A3D8A /* RandomWebService.swift */; };
 		C7F3A0CE2A45B801001A3D8A /* RandomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0CD2A45B801001A3D8A /* RandomImage.swift */; };
 		C7F3A0D12A45B81F001A3D8A /* RandomConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0D02A45B81F001A3D8A /* RandomConstants.swift */; };
+		C7F3A0D42A45BA27001A3D8A /* RandomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0D32A45BA27001A3D8A /* RandomViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C7F3A0CB2A45B7DC001A3D8A /* RandomWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWebService.swift; sourceTree = "<group>"; };
 		C7F3A0CD2A45B801001A3D8A /* RandomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImage.swift; sourceTree = "<group>"; };
 		C7F3A0D02A45B81F001A3D8A /* RandomConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomConstants.swift; sourceTree = "<group>"; };
+		C7F3A0D32A45BA27001A3D8A /* RandomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		C7F3A0C02A45B780001A3D8A /* RandomQuoteAndImages */ = {
 			isa = PBXGroup;
 			children = (
+				C7F3A0D22A45BA12001A3D8A /* ViewModel-Random */,
 				C7F3A0CF2A45B80D001A3D8A /* Utils-Random */,
 				C7F3A0CA2A45B7B1001A3D8A /* Service-Random */,
 				C7F3A0C92A45B7AA001A3D8A /* Model */,
@@ -223,6 +226,14 @@
 				C7F3A0D02A45B81F001A3D8A /* RandomConstants.swift */,
 			);
 			path = "Utils-Random";
+			sourceTree = "<group>";
+		};
+		C7F3A0D22A45BA12001A3D8A /* ViewModel-Random */ = {
+			isa = PBXGroup;
+			children = (
+				C7F3A0D32A45BA27001A3D8A /* RandomViewModel.swift */,
+			);
+			path = "ViewModel-Random";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F3A0D42A45BA27001A3D8A /* RandomViewModel.swift in Sources */,
 				C7F3A0AD2A42EECA001A3D8A /* NewsArticleListViewModel.swift in Sources */,
 				C7F3A0B32A42EF09001A3D8A /* NewsSourceListView.swift in Sources */,
 				C7F3A0B12A42EEFF001A3D8A /* NewsListView.swift in Sources */,
