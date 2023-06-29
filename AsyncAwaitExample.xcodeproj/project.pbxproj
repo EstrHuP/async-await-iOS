@@ -26,6 +26,7 @@
 		C7F3A0CE2A45B801001A3D8A /* RandomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0CD2A45B801001A3D8A /* RandomImage.swift */; };
 		C7F3A0D12A45B81F001A3D8A /* RandomConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0D02A45B81F001A3D8A /* RandomConstants.swift */; };
 		C7F3A0D42A45BA27001A3D8A /* RandomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0D32A45BA27001A3D8A /* RandomViewModel.swift */; };
+		C7F3A0D72A45BC4E001A3D8A /* RandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A0D62A45BC4E001A3D8A /* RandomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		C7F3A0CD2A45B801001A3D8A /* RandomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImage.swift; sourceTree = "<group>"; };
 		C7F3A0D02A45B81F001A3D8A /* RandomConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomConstants.swift; sourceTree = "<group>"; };
 		C7F3A0D32A45BA27001A3D8A /* RandomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewModel.swift; sourceTree = "<group>"; };
+		C7F3A0D62A45BC4E001A3D8A /* RandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,20 +198,21 @@
 		C7F3A0C02A45B780001A3D8A /* RandomQuoteAndImages */ = {
 			isa = PBXGroup;
 			children = (
+				C7F3A0D52A45BC2A001A3D8A /* View */,
+				C7F3A0C92A45B7AA001A3D8A /* Model-Random */,
 				C7F3A0D22A45BA12001A3D8A /* ViewModel-Random */,
 				C7F3A0CF2A45B80D001A3D8A /* Utils-Random */,
 				C7F3A0CA2A45B7B1001A3D8A /* Service-Random */,
-				C7F3A0C92A45B7AA001A3D8A /* Model */,
 			);
 			path = RandomQuoteAndImages;
 			sourceTree = "<group>";
 		};
-		C7F3A0C92A45B7AA001A3D8A /* Model */ = {
+		C7F3A0C92A45B7AA001A3D8A /* Model-Random */ = {
 			isa = PBXGroup;
 			children = (
 				C7F3A0CD2A45B801001A3D8A /* RandomImage.swift */,
 			);
-			path = Model;
+			path = "Model-Random";
 			sourceTree = "<group>";
 		};
 		C7F3A0CA2A45B7B1001A3D8A /* Service-Random */ = {
@@ -234,6 +237,14 @@
 				C7F3A0D32A45BA27001A3D8A /* RandomViewModel.swift */,
 			);
 			path = "ViewModel-Random";
+			sourceTree = "<group>";
+		};
+		C7F3A0D52A45BC2A001A3D8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7F3A0D62A45BC4E001A3D8A /* RandomImageView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +334,7 @@
 				C7F3A0AB2A42EE7B001A3D8A /* NewsWebService.swift in Sources */,
 				C7F3A0AF2A42EED5001A3D8A /* NewsSourceListViewModel.swift in Sources */,
 				C7F3A0A82A42EE40001A3D8A /* NewsSource.swift in Sources */,
+				C7F3A0D72A45BC4E001A3D8A /* RandomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
