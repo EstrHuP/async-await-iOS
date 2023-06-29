@@ -12,6 +12,8 @@ I recommend using the ios 15 onwards.
 
 [Fundamentals Threads queues and concurrency](https://cocoacasts.com/swift-and-cocoa-fundamentals-threads-queues-and-concurrency)
 
+[Avoiding Race Conditions in Swift](https://medium.com/swiftcairo/avoiding-race-conditions-in-swift-9ccef0ec0b26)
+
 ## 🧩 Structured Concurrency resources:
 [Difference between a task and a detached task](https://pages.github.com/](https://www.hackingwithswift.com/quick-start/concurrency/whats-the-difference-between-a-task-and-a-detached-task)https://www.hackingwithswift.com/quick-start/concurrency/whats-the-difference-between-a-task-and-a-detached-task)
 
