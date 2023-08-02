@@ -24,6 +24,16 @@ struct RandomImageView: View {
         }.task {
             await randomImageListVM.getRandomImages(ids: Array(100...200))
         }
+        .navigationTitle("Random Images/Quotes")
+        .navigationBarItems(trailing: Button(action: {
+            
+            Task {
+                await randomImageListVM.getRandomImages(ids: Array(100...200))
+            }
+            
+        }, label: {
+            Image(systemName: "arrow.clockwise.circle")
+        }))
     }
 }
 

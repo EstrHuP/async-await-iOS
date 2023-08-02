@@ -13,9 +13,10 @@ class RandomViewModel: ObservableObject {
     
     @Published var randomImages: [RandomImageViewModel] = [] //refresh automatically
     
-    func getRandomImages(ids: [Int]) async throws {
+    func getRandomImages(ids: [Int]) async {
         
         let webService = RandomWebservice()
+        randomImages = []
         
         do {
             //much faster
