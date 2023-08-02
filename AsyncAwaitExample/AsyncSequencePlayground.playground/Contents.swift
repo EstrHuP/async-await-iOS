@@ -32,8 +32,16 @@ struct LinesIterator: IteratorProtocol {
 
 let endpointURL = URL(string: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv")!
 
+///Much more faster than waiting for a lot of data to be downloaded
 Task {
-    for line in await endpointURL.allLines() {
+    ///Async Sequence is available in many different other places like notifications
+    for try await line in endpointURL.lines {
         print(line)
     }
 }
+
+/* Task {
+    for line in await endpointURL.allLines() {
+        print(line)
+    }
+} */
