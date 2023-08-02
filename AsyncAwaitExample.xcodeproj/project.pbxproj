@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7A146212A7A874A003DFABC /* AsyncSequencePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AsyncSequencePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C7F3A0752A38C639001A3D8A /* AsyncAwaitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncAwaitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F3A0782A38C639001A3D8A /* AsyncAwaitExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitExampleApp.swift; sourceTree = "<group>"; };
 		C7F3A07A2A38C639001A3D8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		C7F3A0772A38C639001A3D8A /* AsyncAwaitExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7A146212A7A874A003DFABC /* AsyncSequencePlayground.playground */,
 				C7F3A0C02A45B780001A3D8A /* RandomQuoteAndImages */,
 				C7F3A0B42A43732C001A3D8A /* Concurrency-Tasks.playground */,
 				C7F3A0912A42ED78001A3D8A /* NewsApp */,
