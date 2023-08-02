@@ -43,7 +43,7 @@ class RandomWebservice {
         return randomImages
     }
     
-    private func getRandomImage(id: Int) async throws -> RandomImage {
+    func getRandomImage(id: Int) async throws -> RandomImage {
         
         guard let url = RandomConstants.Urls.getRandomImageUrl() else {
             throw NetworkError.badUrl

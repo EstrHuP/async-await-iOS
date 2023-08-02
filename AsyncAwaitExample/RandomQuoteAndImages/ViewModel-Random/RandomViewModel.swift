@@ -11,12 +11,26 @@ import UIKit
 @MainActor
 class RandomViewModel: ObservableObject {
     
-    @Published var randomImages: [RandomImageViewModel] = []
+    @Published var randomImages: [RandomImageViewModel] = [] //refresh automatically
     
-    func getRandomImages(ids: [Int]) async {
+    func getRandomImages(ids: [Int]) async throws {
+        
+        let webService = RandomWebservice()
+        
         do {
-            let randomImages = try await RandomWebservice().getRandomImages(ids: ids)
-            self.randomImages = randomImages.map(RandomImageViewModel.init)
+            //much faster
+            try await withThrowingTaskGroup(of: (Int, RandomImage).self, body: { group in
+                
+                for id in ids {
+                    group.async {
+                        return (id, try await webService.getRandomImage(id: id))
+                    }
+                }
+                
+                for try await (_, randomImage) in group {
+                    randomImages.append(RandomImageViewModel(randomImage: randomImage))
+                }
+            })
         } catch {
             print(error)
         }
