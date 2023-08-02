@@ -20,21 +20,37 @@ class RandomWebservice {
         var randomImages: [RandomImage] = []
         
         for id in ids {
-            
             let randomImage = try await getRandomImage(id: id)
             randomImages.append(randomImage)
         }
+        
+        //task group for more concurrencly
+        try await withThrowingTaskGroup(of: (Int, RandomImage).self, body: { group in
+            
+            //get ids of image
+            for id in ids {
+                group.addTask { [self] in
+                    return (id, try await self.getRandomImage(id: id))
+                }
+            }
+            
+            //get random images
+            for try await (_, randomImage) in group {
+                print(randomImage)
+                randomImages.append(randomImage)
+            }
+        })
         return randomImages
     }
     
     private func getRandomImage(id: Int) async throws -> RandomImage {
         
         guard let url = RandomConstants.Urls.getRandomImageUrl() else {
-                   throw NetworkError.badUrl
+            throw NetworkError.badUrl
         }
         
         guard let randomQuoteUrl = RandomConstants.Urls.randomQuoteUrl else {
-                   throw NetworkError.badUrl
+            throw NetworkError.badUrl
         }
         
         async let (imageData, _) = URLSession.shared.data(from: url)
